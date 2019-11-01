@@ -1,0 +1,366 @@
+/*MIS ESTILOS */
+
+p, h2, h3{
+    color: rgba(52,60,69,.8);
+}
+
+.titulo-seccion{
+    font-family: 'Montserrat Subrayada',sans-serif;
+    font-size: 33px;
+    color:
+    #343c45;
+    padding-bottom: 0;
+    display: inherit;
+    border-bottom: 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-seccion{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    color:
+    #343c45;
+    border-bottom: 1px solid
+    #343c45;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+/* NAVBAR */
+
+header .navbar-collapse {
+    height: auto;
+}
+
+header .navbar .navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+}
+
+header .navbar .navbar-collapse {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    background-color: transparent;
+    padding: 0;
+}
+
+header .navbar-collapse .navbar-nav {
+    width: 100%;
+    display: flex;
+    padding-top: 0;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+}
+
+header .navbar .navbar-collapse .navbar-nav li {
+    margin: 0;
+    padding-left: 5px;
+}
+
+header .navbar-collapse .navbar-nav li a {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #343c45;
+    text-decoration: none;
+}
+
+header .navbar-collapse .navbar-nav li.active a {
+    color: #5dd39c!important;
+    font-weight: 600;
+}
+
+header .navbar-collapse .navbar-nav li .btn-dark {
+    color: #fff!important;
+    padding: 10px 0 10px;
+    margin-left: 15px;
+    width: 250px;
+}
+
+/* NAVBAR*/
+
+/*HERO*/
+.hero{
+    background: #f5f9fa;;
+    padding-top: 50px;
+    position: relative;
+    max-height: 500px;
+}
+
+.hero img{
+    max-height: 600px;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.hero .hero-texto{
+    position: relative;
+    font-size: 20px;
+    margin-top: 33vh;
+    margin-bottom: 15px;
+    padding: 0 10%;
+}
+
+.hero .hero-texto h1{
+    font-size: 28px;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+}
+
+.hero .hero-texto .btn-black{
+
+    height: 50px;
+    line-height: 50px;
+    color: #fff!important;
+    background: #343c45;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    box-shadow: 0 7px 13px rgba(52,60,69,.2);
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.hero .hero-texto .certificaciones{
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.hero .hero-texto .certificaciones li{
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+/*NOSOTROS*/
+.nosotros{
+    margin-top: 70px;
+}
+
+
+.nosotros .detalle-nosotros p{
+    font-weight: 400;
+    line-height: 36px;
+}
+
+
+.nosotros .imagen-nosotros img{
+    width: 100%;
+}
+
+/*SERVICIOS*/
+.servicios{
+    margin-top: 50px;
+    background-color: #f5f9fa;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+.servicios h3{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.servicios p{
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.btn-success{
+    color: white !important;
+}
+
+/*CLIENTES*/
+.clientes .clientes-item{
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.clientes .img-clientes{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 10;
+}
+
+.clientes .img-clientes p{
+    font-weight: 400;
+    font-size: 26px;
+    color: white;
+    left: 25%;
+}
+
+/*POST*/
+
+.blog .date ul{
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-left: 10px;
+}
+.blog .date .fecha{
+    font-size: 14px;
+}
+.blog .date .categoria{
+    font-size: 14px;   
+}
+
+/* SINGLE */
+.single-header{
+    padding: 20px 0 0 0;
+    height: 350px;
+}
+
+.single-header .img-fondo{
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+.single-header .img-fondo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* para cortar la imagen*/
+    filter: grayscale(80%);
+    margin-top: 50px;
+}
+
+.single-header .textos{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    z-index: 10;
+}
+
+.single-header .textos h2{
+    font-weight: 700;
+    color:  #5dd39c;
+    font-size: 50px;
+}
+
+@media (max-width: 420px){
+
+    .titulo-seccion{
+        font-size: 28px;
+    }
+
+    header .navbar .navbar-brand{
+        width: 50%;
+    }
+    header .navbar .navbar-brand img{
+        width: 100%;
+    }
+    .navbar-toggler-icon{
+        width: 1em;
+        height: 1em;
+    }
+    /*HERO*/
+    .hero .hero-texto{
+        padding: 0;
+        margin-top: 0;
+        top: 20%;
+    }
+
+    
+}
+
+@media (min-width: 421px) and (max-width: 575px){
+    /*NAVBAR*/
+     header .navbar .navbar-brand{
+        width: 60%;
+    }
+    header .navbar .navbar-brand img{
+        width: 100%;
+    }
+    /*NAVBAR*/
+    
+} 
+
+@media (min-width: 576px) and (max-width: 767px){
+    
+} 
+
+@media (min-width: 768px) and (max-width: 991px){
+    
+} 
+
+@media (min-width: 992px) and (max-width: 1999px){
+    /* NAVBAR */
+
+header .navbar-collapse .navbar-nav li a {
+    font-size: 14px;
+}
+
+header .navbar-collapse .navbar-nav li.active a {
+    color: #5dd39c!important;
+    font-weight: 400;
+}
+
+header .navbar-collapse .navbar-nav li .btn-dark {
+    color: #fff!important;
+    padding: 5px 0;
+    margin-left: 5px;
+    width: 150px;
+}
+
+/* NAVBAR*/
+} 
+
+@media (min-width: 1200px){
+    /*NAVBAR*/
+    header .navbar-collapse .navbar-nav li a {
+    font-size: 16px;
+}
+
+header .navbar-collapse .navbar-nav li.active a {
+    color: #5dd39c!important;
+    font-weight: 600;
+}
+
+header .navbar-collapse .navbar-nav li .btn-dark {
+    color: #fff!important;
+    padding: 5px 15px;
+    margin-left: 5px;
+    width: initial;
+}
+    header .navbar .navbar-brand img {
+        max-height: 60px;
+    }
+    /*NAVBAR*/
+    /*HERO*/
+    /*.espacio{
+        height: 76px;
+    }*/
+}
+
