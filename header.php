@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<?php wp_head(); ?>
 
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/m_style.css">
@@ -65,7 +67,31 @@
           <div class="container-fluid">
 
 
-            <a class="navbar-brand" href="#"><img class="d-lg-block" src="https://www.digitalmenta.com/wp-content/themes/digital-menta/assets/img/logo_header_desktop.svg"></a>
+           <!--  <a class="navbar-brand" href="#"><img class="d-lg-block" src="https://www.digitalmenta.com/wp-content/themes/digital-menta/assets/img/logo_header_desktop.svg"></a> -->
+           
+           
+          <?php 
+
+            if( has_custom_logo() ):   
+            // Get Custom Logo URL
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+            $custom_logo_url = $custom_logo_data[0];
+          ?>
+
+          <a  href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+              title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" 
+              rel="home"
+              class="navbar-brand" >
+
+            <img src="<?php echo esc_url( $custom_logo_url ); ?>" 
+                 alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+                 class="d-lg-block"/>
+          </a>
+          <?php else: ?>
+            <div class="site-name"><?php bloginfo( 'name' ); ?></div>
+          <?php endif; ?>
+    
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
