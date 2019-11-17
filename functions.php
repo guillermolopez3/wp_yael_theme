@@ -1277,3 +1277,30 @@ function personalizar_certificados($wp_customize){
 
 }
 add_action('customize_register','personalizar_certificados');
+
+function personalizar_blog($wp_customize){
+	$wp_customize->add_section( 'blog',array(
+        'title' => 'Blog',
+        'priority' => 7,
+        'panel' => 'panel_custom'
+    ));
+
+     //setings para el boton leer mas
+   	$wp_customize->add_setting( 'link_btn_mas_blog',
+	   array(
+	   	'type' => 'option',
+	   	'transport'=> 'none'
+	));
+	 
+	$wp_customize->add_control( 'link_btn_mas_blog',
+	   array(
+	      'label' => __( 'Botón Leer más Blog' ),
+	      'description' => esc_html__( 'Botón de leer mas en blog' ),
+	      'section' => 'blog',
+	      'priority' => 1, 
+	      'type' => 'dropdown-pages'
+	   )
+	);
+
+}
+add_action('customize_register','personalizar_blog');

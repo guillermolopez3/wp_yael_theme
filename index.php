@@ -114,6 +114,9 @@ get_header(); ?>
   $img_certif_4       = get_theme_mod('img_certif_4');
   $nombre_certif_4    = get_theme_mod('titulo_img_certificado4');
 
+
+  /*BLOG*/
+  $link_btn_blog = get_option('link_btn_mas_blog');
 ?>
 
 	<section class="hero">
@@ -122,7 +125,7 @@ get_header(); ?>
         <div class="row">
           <div class="col-12 col-lg-7">
             <div class="hero-texto text-center">
-              <h1> <?php echo ($titulo=='')? 'DE LA FRUSTRACIÓN NACEN LOS ÉXITOS' : $titulo ; ?> </h1>
+              <h1> <?php echo ($titulo=='')? 'de la frustración nacen los éxitos' : $titulo ; ?> </h1>
               <a href="<?php echo get_permalink($link_btn_resultados); ?>" class="btn-black">¿Buscas Resultados?</a>
               <ul class="certificaciones">
                 <?php if($img_cert_cabe_1 != ''){ ?>
@@ -359,7 +362,7 @@ get_header(); ?>
     			
     		</div>
         <div class="row d-flex justify-content-center mt-5">
-          <a href="#" class="btn btn-success">Leer mas</a>
+          <a href="<?php echo get_permalink($link_btn_blog); ?>" class="btn btn-success">Leer mas</a>
         </div>
       </div>
     </section>

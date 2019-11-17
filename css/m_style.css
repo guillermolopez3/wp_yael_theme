@@ -611,3 +611,58 @@ header .navbar-collapse .navbar-nav li .btn-dark {
     background: #5dd39c;    
     
 }
+
+
+
+/*BLOG*/
+.hero .main .like-h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.hero .blog-img{
+    width: 70%;
+    max-width: 600px;
+}
+
+@media (min-width: 421px){
+    /*NAVBAR*/
+    .hero-mas-padding{
+        padding-top: 70px;
+    }
+    
+} 
+.blog{
+    background-color: #f5f9fa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.blog-container{
+    background-color: white;
+}
+
+.blog .blog-container .blog-list-img{
+    padding: 15px 0;
+}
+
+.blog .blog-container img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.blog .blog-container .blog-detalle a:hover{
+    text-decoration: none;
+}
+.blog .blog-container .blog-detalle{
+    padding: 15px;
+}
+
+.blog .blog-container .blog-detalle .date{
+    margin-top: -8px;
+}
+
+.blog .blog-container .blog-detalle .extract{
+    margin-top: -10px;
+}
