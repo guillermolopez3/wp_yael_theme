@@ -18,19 +18,15 @@
 					<div class="col-12">
 						<h2><?php the_title();?></h2>
 					</div>
-					
 				</div>
-				
 			</div>
-    		
-		</div>
+    	</div>
     </div>
 
     <div class="container">
-    	
     	<div class="row mt-5">
     		<div class="col-12">
-    			<nav>
+    			<!-- <nav>
 	    			<?php 
 						$categories = get_categories();
 						foreach($categories as $category) 
@@ -38,15 +34,14 @@
 		   					echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '  /  </a>';
 						}
 		    		?>
-	    		</nav>
+	    		</nav> -->
+	    		<span class="single-categoria"><?php the_category();?></span>
     		</div>
     	</div>
 
     	<div class="row mt-5">
     		<div class="col-8">
-    			<?php the_content(); ?>
-    			<?php
-        		
+    			<?php 
 				if ( have_posts() )
 				{
 					while ( have_posts()) :
@@ -56,11 +51,6 @@
 				<?php
 					endwhile;
 				}
-				else{
-
-					get_template_part( 'template-parts/content', 'none' );
-				}
-
 			?>
     		</div>
     		<div class="col-4">
@@ -77,24 +67,30 @@
         <h2>Últimos <strong>Artículos</strong></h2>
         <div class="row">
 
-        	<?php
-        		$cant=1;
+        	
 
-				if ( have_posts() )
-				{
-					while ( have_posts() && $cant<=3 ) :
-						the_post();
-						get_template_part( 'template-parts/content_post', get_post_type() );
+			<?php
+				$cant=1;
+		        $args = array(
+		        'post_type'=> 'post',
+		        'orderby'    => 'ID',
+		        'post_status' => 'publish',
+		        'order'    => 'DESC',
+		        'posts_per_page' => -1 // this will retrive all the post that is published 
+		        );
+		        $result = new WP_Query( $args );
+		        if ( $result-> have_posts() ) { 
+		          while ( $result->have_posts()  && $cant<=3 ) : $result->the_post();
+		        	get_template_part( 'template-parts/content_post', get_post_type() );
 
 						$cant++;
-					endwhile;
-				}
-				else{
-
-					get_template_part( 'template-parts/content', 'none' );
-				}
-
-			?>
+		          endwhile;
+		        }
+		        else{
+		          echo '<h5>No hay post para mostrar</h5>';
+		        }
+		         wp_reset_postdata(); 
+		      ?>
 			
 		</div>
       </div>
