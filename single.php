@@ -23,7 +23,7 @@
     	</div>
     </div>
 
-    <div class="container">
+    <div class="container single">
     	<div class="row mt-5">
     		<div class="col-12">
     			<!-- <nav>
@@ -40,7 +40,7 @@
     	</div>
 
     	<div class="row mt-5">
-    		<div class="col-8">
+    		<div class="col-12 col-lg-8 ">
     			<?php 
 				if ( have_posts() )
 				{
@@ -53,9 +53,14 @@
 				}
 			?>
     		</div>
-    		<div class="col-4">
-    			<p>Escrito por: <?php the_author(); ?></p>
-    			<p>el <?php the_date();?></p>
+    		<div class="col-lg-4 d-none d-lg-block single-detalle-post">
+    			<?php
+				       global $current_user;
+				       get_currentuserinfo();     
+				       echo get_avatar( $current_user->ID, 64 );
+				?>
+    			<p class="user-single">Escrito por: <strong><?php the_author(); ?></strong></p>
+    			<p> <?php the_date();?></p>
     		</div>
     	</div>
 

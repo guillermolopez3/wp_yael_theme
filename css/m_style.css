@@ -452,6 +452,11 @@ footer .iconos-rs a i{
     content: ' / ';
 }
 
+.single .single-detalle-post .user-single{
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 @media (max-width: 420px){
@@ -716,4 +721,15 @@ header .navbar-collapse .navbar-nav li .btn-dark {
 
 .blog .blog-container .blog-detalle .extract{
     margin-top: -10px;
+}
+
+/*PAGINA 404*/
+.error_404{
+    padding-top: 150px;
+
+}
+
+/*SEARCH*/
+.search_container{
+    padding-top: 100px;
 }
