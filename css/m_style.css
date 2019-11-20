@@ -29,6 +29,10 @@ p, h2, h3{
 }
 /* NAVBAR */
 
+/*color navbar*/
+.bg-navbar{
+    background-color: #2F31A0;
+}
 header .navbar-collapse {
     height: auto;
 }
@@ -78,7 +82,8 @@ header .navbar-collapse .navbar-nav li a {
 }
 
 header .navbar-collapse .navbar-nav li.active a {
-    color: #5dd39c!important;
+    /*color: #5dd39c!important;*/
+    color: #E05760!important;
     font-weight: 600;
 }
 
@@ -568,15 +573,12 @@ footer .iconos-rs a i{
     }
 
     header .navbar-collapse .navbar-nav li.active a {
-        color: #5dd39c!important;
         font-weight: 400;
     }
 
     header .navbar-collapse .navbar-nav li .btn-dark {
-        color: #fff!important;
-        padding: 5px 0;
+        padding: 15px 0;
         margin-left: 5px;
-        width: 150px;
     }
 
     /* NAVBAR*/
@@ -597,14 +599,10 @@ footer .iconos-rs a i{
     font-size: 16px;
 }
 
-header .navbar-collapse .navbar-nav li.active a {
-    color: #5dd39c!important;
-    font-weight: 600;
-}
+
 
 header .navbar-collapse .navbar-nav li .btn-dark {
-    color: #fff!important;
-    padding: 5px 15px;
+   padding: 15px 15px;
     margin-left: 5px;
     width: initial;
 }
@@ -732,4 +730,8 @@ header .navbar-collapse .navbar-nav li .btn-dark {
 /*SEARCH*/
 .search_container{
     padding-top: 100px;
+}
+
+.font_fa{
+    font-family: 'Prompt', sans-serif;
 }

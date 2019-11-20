@@ -18,7 +18,8 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Prompt:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -63,7 +64,8 @@
             
         </nav> -->
 
-        <nav class="fixed-top navbar navbar-expand-xl navbar-light bg-light">
+       <!--  <nav class="fixed-top navbar navbar-expand-xl navbar-light bg-light"> -->
+        <nav class="fixed-top navbar navbar-expand-xl navbar-dark bg-navbar">
           <div class="container-fluid">
 
 

@@ -1,9 +1,5 @@
 <?php
-/**
-  Template Name: Blog
 
- paginación en video 16
- */
 
 get_header(); ?>
 
