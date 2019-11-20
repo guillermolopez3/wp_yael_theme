@@ -5,7 +5,7 @@ p, h2, h3{
 }
 
 .titulo-seccion{
-    font-family: 'Montserrat Subrayada',sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-size: 33px;
     color:
     #343c45;
@@ -16,8 +16,8 @@ p, h2, h3{
 }
 
 .subtitulo-seccion{
-    font-family: 'Montserrat',sans-serif;
-    font-weight: 300;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
     color:
     #343c45;
     border-bottom: 1px solid
@@ -142,7 +142,7 @@ header .navbar-collapse .navbar-nav li .btn-dark {
     background: #343c45;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Prompt', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,6 +305,9 @@ header .navbar-collapse .navbar-nav li .btn-dark {
 /*CERTIFICACIONES*/
 .mis-certificaciones{
     margin-bottom: 30px;
+    background-color: #f5f9fa;
+    padding-top: 70px;
+    padding-bottom: 40px;
 }
 
 .mis-certificaciones img{
@@ -398,6 +401,37 @@ footer .iconos-rs a i{
     color: #424949;
     font-size: 50px;
     margin-right: 10px;
+}
+
+footer nav ul{
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+footer nav ul li{
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 15px;
+}
+
+footer nav ul li a{
+    color: #343c45;
+    font-size: 14px;
+}
+
+footer nav ul li a:hover{
+    color: #343c45;
+    text-decoration: none;
+}
+
+footer nav ul li a:visited{
+    color: #343c45;
+}
+
+footer h4{
+    text-transform: uppercase;
+    color: rgba(52,60,69,.8);
+    font-family: "Prompt", sans-serif;
 }
 
 
@@ -688,7 +722,6 @@ header .navbar-collapse .navbar-nav li .btn-dark {
     
 } 
 .blog{
-    background-color: #f5f9fa;
     padding-top: 30px;
     padding-bottom: 30px;
 }

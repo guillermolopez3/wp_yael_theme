@@ -1,9 +1,9 @@
 
-$all_ul = $('#menu-menu2');
+$all_ul = $('#menu_top');
 
 //console.log($all_ul);
 
-$('#menu-menu2').each(function(){
+$('#menu_top').each(function(){
     var phrase = '';
     $(this).find('li').each(function(){
         // cache jquery object

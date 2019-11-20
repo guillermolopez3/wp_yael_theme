@@ -305,7 +305,7 @@ get_header(); ?>
     </section>
 
 
-     <section class="mis-certificaciones mt-5">
+     <section class="mis-certificaciones">
       <div class="container">
         <h2 class="titulo-seccion"> <strong><?php echo ($titulo_certificados=='')? 'Quien certifica mis habilidades' : $titulo_certificados ;?></strong></h2>
         <div class="mis-certificaciones-detalle">

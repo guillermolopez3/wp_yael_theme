@@ -1,25 +1,43 @@
 <footer class="footer mt-5">
   <div class="container">
-        <!-- <div class="row row-pie">
-          <div class="col-lg-4">
-            <h3><strong>FREELANCE</strong> </h3>
-            <p><a href="#">consectetur adipisicing</a></p>
-            <p><a href="#">consectetur adipisicing</a></p>
-          </div>
-          <div class="col-lg-4">
-            <h3><strong>SEM</strong> </h3>
-            <p><a href="#">consectetur adipisicing</a></p>
-            <p><a href="#">consectetur adipisicing</a></p>
-          </div>
-          <div class="col-lg-4">
-            <h3><strong>SOCIAL ADS</strong> </h3>
-            <p><a href="#">consectetur adipisicing</a></p>
-            <p><a href="#">consectetur adipisicing</a></p>
-          </div>
-      </div> -->
+        
+    <nav class="row">
+      <div class="col-12 col-md-4 col-lg">
+        <h4 class="mb-3">freelance</h4>
+        <?php
+           wp_nav_menu( array(
+            'container'=>false,
+            'item_wrap'=> '<ul>%3$s</ul>',
+            'theme_location'    => 'footer_frel',
+           ));
+        ?>
+      </div>
 
+      <div class="col-12 col-md-4 col-lg">
+        <h4 class="mb-3">sem</h4>
+        <?php
+           wp_nav_menu( array(
+            'container'=>false,
+            'item_wrap'=> '<ul>%3$s</ul>',
+            'theme_location'    => 'footer_sem',
+           ));
+        ?>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg">
+        <h4 class="mb-3">social ads</h4>
+        <?php
+           wp_nav_menu( array(
+            'container'=>false,
+            'item_wrap'=> '<ul>%3$s</ul>',
+            'theme_location'    => 'footer_social',
+           ));
+        ?>
+      </div>
+    </nav>
+
+    <hr>
     <div class="row">
-
       <div class="col-12 col-md-6 logo">
         
          <?php 
@@ -43,14 +61,12 @@
           <?php else: ?>
             <div class="site-name"><?php bloginfo( 'name' ); ?></div>
           <?php endif; ?>
-
       </div>
-        
+  
       <div class="col-12 col-md-6 iconos-rs d-flex justify-content-md-end align-items-center">
         <a href=""><i class="fa fa-facebook-square"></i></a>
         <a href=""><i class="fa fa-youtube"></i></a>
         <a href=""><i class="fa fa-instagram"></i></a>
-        
       </div>
     </div>
 

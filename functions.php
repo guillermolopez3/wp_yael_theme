@@ -49,9 +49,13 @@ if ( ! function_exists( 'yael_setup' ) ) :
 		
 		add_action( 'after_setup_theme', 'register_navwalker' );
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'yael' ),
-			'primary' => __( 'Menu Principal', 'yael' )
+			'primary' => __( 'Menu Principal', 'yael_t' ),
+			'footer_frel' => esc_html__('Footer Freelance','yael_t'),
+			'footer_sem' => esc_html__('Footer Sem','yael_t'),
+			'footer_social' => esc_html__('Footer Social Ads','yael_t')
 		) );
+
+		
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
