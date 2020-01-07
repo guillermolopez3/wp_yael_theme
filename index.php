@@ -114,61 +114,69 @@ get_header(); ?>
   $img_certif_4       = get_theme_mod('img_certif_4');
   $nombre_certif_4    = get_theme_mod('titulo_img_certificado4');
 
+  $img_certif_5       = get_theme_mod('img_certif_5');
+  $nombre_certif_5    = get_theme_mod('titulo_img_certificado5');
+
+  $img_certif_6       = get_theme_mod('img_certif_6');
+  $nombre_certif_6    = get_theme_mod('titulo_img_certificado6');
+
 
   /*BLOG*/
   $link_btn_blog = get_option('link_btn_mas_blog');
+  $sub_ti_blog = get_theme_mod('sub_titulo_blog');
 ?>
 
-	<section class="hero">
-      <img class="position-absolute d-block d-lg-none" src="<?php bloginfo('template_url')?>/img/yael.jpg">
+	<section id="hero" class="hero">
+      <img class="position-absolute d-none" src="<?php echo $img_cabe; ?>">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-7">
-            <div class="hero-texto text-center">
+            <div class="hero-texto">
               <h1> <?php echo ($titulo=='')? 'de la frustración nacen los éxitos' : $titulo ; ?> </h1>
-              <a href="<?php echo get_permalink($link_btn_resultados); ?>" class="btn-black">¿Buscas Resultados?</a>
+              <!-- <a id="btn_resul" href="<?php echo get_permalink($link_btn_resultados); ?>" class="btn btn-black btn-header btn-naranja">QUIERO RESULTADOS</a> -->
+              <a id="btn_resul" href="https://api.whatsapp.com/send?phone=5493517732038&text=Estoy%20buscando%20generar%20resultados%20para%20mi%20negocio" class="btn btn-black btn-header btn-naranja">QUIERO RESULTADOS</a>
               <ul class="certificaciones">
                 <?php if($img_cert_cabe_1 != ''){ ?>
                   <li><img src="<?php echo $img_cert_cabe_1?>"></li>
                 <?php } ?>
 
                 <?php if($img_cert_cabe_2 != ''){ ?>
-                  <li><img src="<?php echo $img_cert_cabe_1?>"></li>
+                  <li><img src="<?php echo $img_cert_cabe_2?>"></li>
                 <?php } ?>
 
                 <?php if($img_cert_cabe_3 != ''){ ?>
-                  <li><img src="<?php echo $img_cert_cabe_1?>"></li>
+                  <li><img src="<?php echo $img_cert_cabe_3?>"></li>
                 <?php } ?>
 
               </ul>
             </div>
           </div>
-          <div class="col-lg-5 d-none d-lg-flex w-100 align-items-end">
+          <div class="col-lg-5 d-none d-lg-flex w-100">
             <img src="<?php echo $img_cabe; ?>">
           </div>
         </div>
       </div>
   </section>
 
-    <section class="nosotros">
+  <section id="nosotros" class="nosotros">
       <div class="container">
         <h2 class="titulo-seccion"> <span class="subtitulo-seccion"> <?php echo ($titulo_nosotros=='')? 'sobre el fracaso' : $titulo_nosotros ;?> </span> <br> <strong><?php echo ($sub_ti_nosotros=='')? 'Quienes los superan' : $sub_ti_nosotros ?></strong></h2>
         <div class="row">
           <div class="detalle-nosotros col-lg-6">
-            <p>  
+            <p class="text-justify">  
               <?php echo ($detalle_nosotros !='') ? $detalle_nosotros : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nemo dolores odit neque eaque amet provident sunt minima natus dolorem praesentium deserunt accusantium optio possimus, ducimus pariatur, quo hic excepturi.' ; ?>
             </p>
           </div>
-          <div class="imagen-nosotros col-lg-6">
+          <div class="imagen-nosotros col-lg-6 ">
              <img src="<?php echo $img_nosotros; ?>">
            </div>
         </div>
       </div>
-    </section>
+  </section>
 
-    <section class="servicios">
+  <section id="servicios" class="servicios">
       <div class="container">
-        <h2 class="titulo-seccion"> <span class="subtitulo-seccion"> <?php echo ($titulo_servicios=='')? 'Sobre el éxito' : $titulo_servicios ;?></span> <br> <strong><?php echo ($sub_ti_servicios=='')? 'Qué herramientas aplicar' : $sub_ti_servicios ?></strong></h2>
+        <h2 class="titulo-seccion text-center"> <span class="subtitulo-seccion"> <?php echo ($titulo_servicios=='')? 'Sobre el éxito' : $titulo_servicios ;?></span> <br> <strong><?php echo ($sub_ti_servicios=='')? 'Qué herramientas aplicar' : $sub_ti_servicios ?></strong></h2>
 
         <p class="mb-6">
           <?php echo ($detalle_servicio !='') ? $detalle_servicio : 'Tomate cinco minutos para pensar en el objetivo comercial de tu negocio.Listo! Ya tenés la parte más importante de tu estrategia. Ahora vamos a lograrlo juntos!' ; ?>
@@ -203,16 +211,17 @@ get_header(); ?>
         </div>
         
         <div class="row d-flex justify-content-center mt-5">
-          <a href="<?php echo get_permalink($link_btn_servici); ?>" class="btn btn-success">Leer mas</a>
+          <a href="<?php echo get_permalink($link_btn_servici); ?>" class="btn btn-naranja" style="background-color: <?php echo get_theme_mod( 'color_botones'); ?>" >Leer mas</a>
         </div>
 
       </div>
-    </section>
+  </section>
 
 <!-- CLIENTES -->
-     <section class="clientes mt-5">
+
+  <section id="clientes" class="clientes mt-5">
       <div class="container">
-        <h2 class="titulo-seccion"> <span class="subtitulo-seccion"> <?php echo ($titulo_clientes=='')? 'Los clientes' : $titulo_clientes ;?></span> <br> <strong><?php echo ($sub_ti_clientes=='')? 'Que tienen razón' : $sub_ti_clientes ?></strong></h2>
+        <h2 class="titulo-seccion text-center"> <span class="subtitulo-seccion"> <?php echo ($titulo_clientes=='')? 'Los clientes' : $titulo_clientes ;?></span> <br> <strong><?php echo ($sub_ti_clientes=='')? 'Que tienen razón' : $sub_ti_clientes ?></strong></h2>
         <div class="clientes-detalle">
           <p class="text-center"><?php echo ($detalle_clientes !='') ? $detalle_clientes : 'Estos son los clientes que se animaron a tener éxito' ; ?></p>
         </div>
@@ -244,14 +253,14 @@ get_header(); ?>
         </div>
 
         <div class="row d-flex justify-content-center mt-5">
-          <a href="<?php echo get_permalink($link_btn_clientes); ?>" class="btn btn-success">Leer mas</a>
+          <a href="<?php echo get_permalink($link_btn_clientes); ?>" class="btn btn-naranja" style="background-color: <?php echo get_theme_mod( 'color_botones'); ?>">Leer mas</a>
         </div>
       </div>
-    </section>
+  </section>
 
 <!-- TESTIMONIOS-->
 
-     <section class="testimonios mt-5" style="background-image: url(<?php echo $bk_testimonio?>);">
+  <section id="testimonios" class="testimonios mt-5" style="background-image: url(<?php echo $bk_testimonio?>);">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -268,7 +277,7 @@ get_header(); ?>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
-              <div class="carousel-inner text-center">
+              <div class="carousel-inner text-center" style="border-color: <?php echo get_theme_mod( 'color_botones'); ?>">
 
 
                  <?php 
@@ -299,15 +308,14 @@ get_header(); ?>
 
           </div>     
         </div>
-
-        
       </div>
-    </section>
+  </section>
 
+<!-- CERTIFICACIONES-->
 
-     <section class="mis-certificaciones">
+  <section id="certificaciones" class="mis-certificaciones">
       <div class="container">
-        <h2 class="titulo-seccion"> <strong><?php echo ($titulo_certificados=='')? 'Quien certifica mis habilidades' : $titulo_certificados ;?></strong></h2>
+        <h2 class="titulo-seccion"><span class="subtitulo-seccion"> <?php echo ($titulo_certificados=='')? 'Quien certifica mis habilidades' : $titulo_certificados ;?></span> </h2>
         <div class="mis-certificaciones-detalle">
           <p class="text-center"><?php echo ($sub_ti_certificados=='')? 'Gracias por tanto Google' : $sub_ti_certificados ;?></p>
         </div>
@@ -315,7 +323,7 @@ get_header(); ?>
         <div class="row mt-5">
 
           <?php 
-            for($i=1;$i<=4;$i++)
+            for($i=1;$i<=6;$i++)
             {
               $aux_img_cert = ${'img_certif_' . $i}; 
               $aux_nom_cert = ${'nombre_certif_' . $i};
@@ -333,12 +341,17 @@ get_header(); ?>
             }
           ?>
       </div>
-    </section>
+  </section>
 
+<!-- BLOG-->
 
-     <section class="blog mt-5">
+  <section id="blog" class="blog mt-5">
       <div class="container">
-        <h2 class="titulo-seccion"> <span class="subtitulo-seccion"> Mis <strong>post-its</strong></span> <br> <strong>Últimas noticias</strong></h2>
+        <h2 class="titulo-seccion"> <span class="subtitulo-seccion"> Mis <strong>post-its</strong></span> <br> <strong>Último Momento</strong></h2>
+
+        <div class="mis-certificaciones-detalle">
+          <p><?php echo ($sub_ti_blog=='')? 'Ver las últimas entradas' : $sub_ti_blog ;?></p>
+        </div>
 
         <div class="row">
 
@@ -362,14 +375,11 @@ get_header(); ?>
     			
     		</div>
         <div class="row d-flex justify-content-center mt-5">
-          <a href="<?php echo get_permalink($link_btn_blog); ?>" class="btn btn-success">Leer mas</a>
+          <a href="<?php echo get_permalink($link_btn_blog); ?>" class="btn btn-naranja" style="background-color: <?php echo get_theme_mod( 'color_botones'); ?>">Leer mas</a>
         </div>
       </div>
-    </section>
+  </section>
 	
-   <div>
-    
-  </div> 
 
 <?php get_footer(); ?>
 

@@ -430,7 +430,6 @@ function personalizar_nosotros($wp_customize){
 	   )
 	) );
 
-
 }
 add_action('customize_register','personalizar_nosotros');
 
@@ -665,7 +664,6 @@ function personalizar_servicios($wp_customize){
 	      'type' => 'dropdown-pages'
 	   )
 	);
-
 
 }
 add_action('customize_register','personalizar_servicios');
@@ -964,7 +962,6 @@ function personalizar_clientes($wp_customize){
 	   )
 	);
 
-
 }
 add_action('customize_register','personalizar_clientes');
 
@@ -1134,9 +1131,6 @@ function personalizar_testimonios($wp_customize){
         'type' => 'textarea'
     ));
 
-
-
-
 }
 add_action('customize_register','personalizar_testimonios');
 
@@ -1278,6 +1272,62 @@ function personalizar_certificados($wp_customize){
         'priority' => 10, 
     ));
 
+    //img cert 5
+	$wp_customize->add_setting( 'img_certif_5', array(
+	));
+	 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img_certif_5',
+	   array(
+	      'label' => __( 'Imagen certificado 5' ),
+	      'section' => 'certificados',
+	      'priority' => 11,
+	      'button_labels' => array( // Optional.
+	         'select' => __( 'Seleccionar Imagen 80x80' ),
+	         'change' => __( 'Cambiar Imagen' ),
+	         'remove' => __( 'Quitar' ),
+	         'default' => __( 'Default' ),
+	         'placeholder' => __( 'No hay imagen seleccionada' ),
+	         'frame_title' => __( 'Selecccionar Imagen' ),
+	         'frame_button' => __( 'Elegir Imagen' ),
+	      )
+	   )
+	) );
+
+	$wp_customize->add_setting('titulo_img_certificado5', array());
+    $wp_customize->add_control('titulo_img_certificado5', array(
+        'label' => 'Título imagen certificado 5',
+        'section' => 'certificados',
+        'priority' => 12, 
+    ));
+
+    //img cert 6
+	$wp_customize->add_setting( 'img_certif_6', array(
+	));
+	 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img_certif_6',
+	   array(
+	      'label' => __( 'Imagen certificado 6' ),
+	      'section' => 'certificados',
+	      'priority' => 13,
+	      'button_labels' => array( // Optional.
+	         'select' => __( 'Seleccionar Imagen 80x80' ),
+	         'change' => __( 'Cambiar Imagen' ),
+	         'remove' => __( 'Quitar' ),
+	         'default' => __( 'Default' ),
+	         'placeholder' => __( 'No hay imagen seleccionada' ),
+	         'frame_title' => __( 'Selecccionar Imagen' ),
+	         'frame_button' => __( 'Elegir Imagen' ),
+	      )
+	   )
+	) );
+
+	$wp_customize->add_setting('titulo_img_certificado6', array());
+    $wp_customize->add_control('titulo_img_certificado6', array(
+        'label' => 'Título imagen certificado 6',
+        'section' => 'certificados',
+        'priority' => 14, 
+    ));
+
 
 }
 add_action('customize_register','personalizar_certificados');
@@ -1287,6 +1337,14 @@ function personalizar_blog($wp_customize){
         'title' => 'Blog',
         'priority' => 7,
         'panel' => 'panel_custom'
+    ));
+
+    //subtitulo
+    $wp_customize->add_setting('sub_titulo_blog', array());
+    $wp_customize->add_control('sub_titulo_blog', array(
+        'label' => 'Sub-título',
+        'section' => 'blog',
+        'priority' => 1, 
     ));
 
      //setings para el boton leer mas
@@ -1301,10 +1359,166 @@ function personalizar_blog($wp_customize){
 	      'label' => __( 'Botón Leer más Blog' ),
 	      'description' => esc_html__( 'Botón de leer mas en blog' ),
 	      'section' => 'blog',
-	      'priority' => 1, 
+	      'priority' => 2, 
 	      'type' => 'dropdown-pages'
 	   )
 	);
 
 }
 add_action('customize_register','personalizar_blog');
+
+function personalizar_colores($wp_customize){
+	
+	//color cabecera
+	$wp_customize->add_setting( 'color_menu',
+	   array(
+	      'default' => '#f5f9fa',
+	      'transport' => 'refresh',
+	      'sanitize_callback' => 'sanitize_hex_color'
+	   )
+	);
+	 
+	$wp_customize->add_control( 'color_menu',
+	   array(
+	      'label' => __( 'Color Menú' ),
+	      'description' => esc_html__( 'Color de fondo del menú' ),
+	      'section' => 'colors',
+	      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+	      'type' => 'color',
+	   )
+	);
+
+	//color letra menu
+	$wp_customize->add_setting( 'color_letra_menu',
+	   array(
+	      'default' => 'blanco',
+	      'transport' => 'refresh',
+	   )
+	);
+	 
+	$wp_customize->add_control( 'color_letra_menu',
+	   array(
+	      'label' => __( 'Color letra' ),
+	      'description' => esc_html__( 'Color de la letra del menú' ),
+	      'section' => 'colors',
+	      'priority' => 11, // Optional. Order priority to load the control. Default: 10
+	      'type' => 'radio',
+	      'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+	      'choices' => array( // Optional.
+	         'blanco' => __( 'Negro' ),
+	         'negro' => __( 'Blanco' ),
+	     )
+	   )
+	);
+
+	//color footer
+	$wp_customize->add_setting( 'color_footer',
+	   array(
+	      'default' => '#f5f9fa',
+	      'transport' => 'refresh',
+	      'sanitize_callback' => 'sanitize_hex_color'
+	   )
+	);
+	 
+	$wp_customize->add_control( 'color_footer',
+	   array(
+	      'label' => __( 'Color footer' ),
+	      'description' => esc_html__( 'Color de fondo del footer' ),
+	      'section' => 'colors',
+	      'priority' => 12, // Optional. Order priority to load the control. Default: 10
+	      'type' => 'color',
+	   )
+	);
+
+	//color botones
+	$wp_customize->add_setting( 'color_botones',
+	   array(
+	      'default' => '#E05760',
+	      'transport' => 'refresh',
+	      'sanitize_callback' => 'sanitize_hex_color'
+	   )
+	);
+	 
+	$wp_customize->add_control( 'color_botones',
+	   array(
+	      'label' => __( 'Color botones' ),
+	      'description' => esc_html__( 'Color de botones y detalles' ),
+	      'section' => 'colors',
+	      'priority' => 13, // Optional. Order priority to load the control. Default: 10
+	      'type' => 'color',
+	   )
+	);
+}
+add_action('customize_register','personalizar_colores');
+
+function personalizar_footer($wp_customize){
+	$wp_customize->add_section( 'footer',array(
+        'title' => 'Footer',
+        'priority' => 8,
+        'panel' => 'panel_custom'
+    ));
+
+    //img cert 1
+	$wp_customize->add_setting( 'img_foo_1', array(
+	));
+	 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img_foo_1',
+	   array(
+	      'label' => __( 'Imagen certificado footer 1' ),
+	      'section' => 'footer',
+	      'priority' => 1,
+	      'button_labels' => array( // Optional.
+	         'select' => __( 'Seleccionar Imagen' ),
+	         'change' => __( 'Cambiar Imagen' ),
+	         'remove' => __( 'Quitar' ),
+	         'default' => __( 'Default' ),
+	         'placeholder' => __( 'No hay imagen seleccionada' ),
+	         'frame_title' => __( 'Selecccionar Imagen' ),
+	         'frame_button' => __( 'Elegir Imagen' ),
+	      )
+	   )
+	) );
+
+	//img cert 2
+	$wp_customize->add_setting( 'img_foo_2', array(
+	));
+	 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img_foo_2',
+	   array(
+	      'label' => __( 'Imagen certificado footer 2' ),
+	      'section' => 'footer',
+	      'priority' => 2,
+	      'button_labels' => array( // Optional.
+	         'select' => __( 'Seleccionar Imagen' ),
+	         'change' => __( 'Cambiar Imagen' ),
+	         'remove' => __( 'Quitar' ),
+	         'default' => __( 'Default' ),
+	         'placeholder' => __( 'No hay imagen seleccionada' ),
+	         'frame_title' => __( 'Selecccionar Imagen' ),
+	         'frame_button' => __( 'Elegir Imagen' ),
+	      )
+	   )
+	) );
+
+	//img cert 3
+	$wp_customize->add_setting( 'img_foo_3', array(
+	));
+	 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img_foo_3',
+	   array(
+	      'label' => __( 'Imagen certificado footer 3' ),
+	      'section' => 'footer',
+	      'priority' => 3,
+	      'button_labels' => array( // Optional.
+	         'select' => __( 'Seleccionar Imagen' ),
+	         'change' => __( 'Cambiar Imagen' ),
+	         'remove' => __( 'Quitar' ),
+	         'default' => __( 'Default' ),
+	         'placeholder' => __( 'No hay imagen seleccionada' ),
+	         'frame_title' => __( 'Selecccionar Imagen' ),
+	         'frame_button' => __( 'Elegir Imagen' ),
+	      )
+	   )
+	) );
+}
+add_action('customize_register','personalizar_footer');

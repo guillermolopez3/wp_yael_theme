@@ -61,6 +61,11 @@
 				?>
     			<p class="user-single">Escrito por: <strong><?php the_author(); ?></strong></p>
     			<p> <?php the_date();?></p>
+    			<!-- <div class="blog-contacto mt-3">
+    				<h4>¿Hablamos?</h4>
+    				<?php echo do_shortcode( '[contact-form-7 id="189" title="formulario-blog"]' ); ?>
+    			</div> -->
+    			
     		</div>
     	</div>
 
