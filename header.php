@@ -38,66 +38,28 @@
 
 
 	<header class="w-100">
-        <!-- <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img class="d-lg-block" src="https://www.digitalmenta.com/wp-content/themes/digital-menta/assets/img/logo_header_desktop.svg">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/yael/blog/">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="text-center">
-                    <a class="btn-dark d-block" href="#">Contactame!</a>
-                  </li> 
-
-                </ul> 
-              </div>
-
-            
-        </nav> -->
-
-        <!-- <nav class="fixed-top navbar navbar-expand-xl navbar-light bg-light"> -->
-          <nav id="menu_top" class="fixed-top navbar navbar-expand-xl <?php echo (get_theme_mod( 'color_letra_menu') == 'blanco')? 'navbar-light' : 'navbar-dark'; ?> " style="background-color: <?php echo get_theme_mod( 'color_menu' ); ?>">
-        
-        <!-- <nav id="menu_top" class="fixed-top navbar navbar-expand-xl navbar-dark bg-navbar" style="background: url(<?php bloginfo('template_url')?>/img/noise_texture.png) center top repeat;">
-          <div class="container-fluid"> -->
-
-
-           <!--  <a class="navbar-brand" href="#"><img class="d-lg-block" src="https://www.digitalmenta.com/wp-content/themes/digital-menta/assets/img/logo_header_desktop.svg"></a> -->
+    <nav id="menu_top" class="fixed-top navbar navbar-expand-xl <?php echo (get_theme_mod( 'color_letra_menu') == 'blanco')? 'navbar-light' : 'navbar-dark'; ?> " style="background-color: <?php echo get_theme_mod( 'color_menu' ); ?>">
            
-           
-          <?php 
+    <?php 
+      if( has_custom_logo() ):   
+      // Get Custom Logo URL
+      $custom_logo_id = get_theme_mod( 'custom_logo' );
+      $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+      $custom_logo_url = $custom_logo_data[0];
+    ?>
 
-            if( has_custom_logo() ):   
-            // Get Custom Logo URL
-            $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-            $custom_logo_url = $custom_logo_data[0];
-          ?>
+    <a  href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+        title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" 
+        rel="home"
+        class="navbar-brand" >
 
-          <a  href="<?php echo esc_url( home_url( '/' ) ); ?>" 
-              title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" 
-              rel="home"
-              class="navbar-brand" >
-
-            <img src="<?php echo esc_url( $custom_logo_url ); ?>" 
-                 alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
-                 class="d-lg-block"/>
-          </a>
-          <?php else: ?>
-            <div class="site-name"><?php bloginfo( 'name' ); ?></div>
-          <?php endif; ?>
+      <img src="<?php echo esc_url( $custom_logo_url ); ?>" 
+         alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+         class="d-lg-block"/>
+    </a>
+    <?php else: ?>
+      <div class="site-name"><?php bloginfo( 'name' ); ?></div>
+    <?php endif; ?>
     
 
             <!-- Brand and toggle get grouped for better mobile display -->

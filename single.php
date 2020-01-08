@@ -26,7 +26,7 @@
     <div class="container single">
     	<div class="row mt-5">
     		<div class="col-12">
-    			<!-- <nav>
+    			 <nav class="single-categoria">
 	    			<?php 
 						$categories = get_categories();
 						foreach($categories as $category) 
@@ -34,8 +34,8 @@
 		   					echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '  /  </a>';
 						}
 		    		?>
-	    		</nav> -->
-	    		<span class="single-categoria"><?php the_category();?></span>
+	    		</nav> 
+	    		<!-- <span class="single-categoria"><?php the_category();?></span> -->
     		</div>
     	</div>
 

@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<dir>
+	<dir id="template-empty">
 		<?php the_content();?>
 	</dir>
 

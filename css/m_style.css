@@ -1,4 +1,7 @@
 /*MIS ESTILOS */
+html {
+  scroll-behavior: smooth;
+}
 
 p, h2, h3{
     color: rgba(52,60,69,.8);
@@ -113,7 +116,7 @@ header .navbar-collapse .navbar-nav li a {
 header .navbar-collapse .navbar-nav li.active a {
     /*color: #5dd39c!important;*/
     /*color: #E05760!important;*/
-    color: white;
+    color: #E2F900!important;
     font-weight: 600;
 }
 
@@ -398,11 +401,11 @@ header .navbar-collapse .navbar-nav li .btn-dark {
     list-style: none;
     display: inline-flex;
     padding: 0;
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 .blog .date ul li:after{
-    content: ' / ';
+    /*content: ' / ';*/
 }
 
 .blog .date ul a{
@@ -449,6 +452,10 @@ footer .logo a{
 
 footer .logo img{
     margin-left: -40px;
+}
+
+footer .iconos-rs{
+    padding: 30px;
 }
 
 footer .iconos-rs a:visited{
@@ -515,7 +522,7 @@ footer .certificaciones-footer li img{
 }
 
 footer .footer-social{
-    padding: 20px 0;
+   padding: 20px 0;
 }
 
 footer .iconos-rs a{
@@ -525,7 +532,6 @@ footer .iconos-rs a{
 
 /* SINGLE */
 .single-header{
-    padding: 20px 0 0 0;
     height: 350px;
 }
 
@@ -539,7 +545,7 @@ footer .iconos-rs a{
     height: 100%;
     object-fit: cover; /* para cortar la imagen*/
     filter: grayscale(80%);
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .single-header .textos{
@@ -557,13 +563,28 @@ footer .iconos-rs a{
 
 .single-categoria{
     font-weight: 600;
-    font-size: 25px;
+    font-size: 18px;
 
 }
-.single-categoria ul{
+
+/*.single-categoria ul{
     list-style: none;
     margin: 0;
     display: inline-flex;
+}*/
+
+.single-categoria a{
+    color: #343c45;
+    margin-left: 5px;
+}
+
+.single-categoria  a:hover{
+    text-decoration: none;
+    color: #e2f900;
+}
+
+.single-categoria .single-active{
+    color: #e2f900;   
 }
 
 .single-categoria ul li a{
@@ -739,7 +760,10 @@ footer .iconos-rs a{
 }
 
 
-
+/*TEMPLATE FULL*/
+#template-empty{
+    margin-top: 80px;
+}
 
 
 @media (max-width: 420px){
@@ -773,10 +797,13 @@ footer .iconos-rs a{
         margin: auto;
         font-size: 16px;
     }
+    .testimonios .carousel .carousel-item .item-testimonio img{
+        width: 120%;
+    }
 
     /*FOOTER*/
     footer .iconos-rs{
-        margin-top: 20px;
+        /*margin-top: 20px;*/
     }
     footer .logo a{
         width: 70%;

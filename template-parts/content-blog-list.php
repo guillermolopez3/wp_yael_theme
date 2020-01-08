@@ -16,7 +16,7 @@
   <div class="col-md-6 blog-detalle">
     <a href="<?php the_permalink();?>"><h2><?php the_title();?></h2></a>
     <div class="date"> 
-      <span class="fecha"> <?php echo get_the_date();?> </span>-<span class="categoria"><?php the_category();?></span> 
+      <span class="fecha"> <?php echo get_the_date();?> </span> - <span class="categoria"><?php the_category();?></span> 
     </div>
     <div class="extract"><?php the_excerpt(); ?></div>
  
