@@ -16,7 +16,7 @@
 	</div>
 	<article>
 		<div class="date"> 
-			<span class="fecha"> <?php echo get_the_date();?> </span>-<span class="categoria"><?php the_category();?></span> 
+			<span class="fecha"> <?php echo get_the_date();?> </span> - <span class="categoria"><?php the_category();?></span> 
 		</div>
 		<hgroup><a href="<?php the_permalink();?>"><?php the_title();?></a></hgroup>
 		<div class="extract"><?php the_excerpt(); ?></div>

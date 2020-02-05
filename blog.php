@@ -13,8 +13,15 @@ get_header(); ?>
            <div class="col-12 main">
              <h1 class="like-h1">blog</h1>
            </div>
-           <div class="col-12">
-             <img class="blog-img" src="<?php bloginfo('template_url')?>/img/analytics.jpg">
+           <div class="blog-hero col-12" style="background-image: url(<?php echo bloginfo('template_url')?>/img/fondo_marketing.png );">
+              
+              <h4>
+                Bienvenidos al más allá, donde el marketing se cocina tan fácil como una milanesa. ¿Querés recibirla en tu mail?
+              </h4>
+              
+              <br>
+
+              <a id="btn_resul" href="" class="btn btn-black btn-header btn-naranja">¡La quiero!</a>
            </div>
          </div>
       </div>

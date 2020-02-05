@@ -68,9 +68,9 @@ html {
 
 body {
 	margin: 0;
-	/*font-family: 'Montserrat', sans-serif;*/
-	font-family: 'Prompt', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background-color: red; 
+	overflow-x: hidden;
 }
 
 /**
@@ -399,11 +399,10 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	/*font-family: sans-serif;*/
-	font-family: 'Prompt', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
