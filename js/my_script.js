@@ -100,16 +100,12 @@ function myFunction() {
     }
 }
 
-$(function() {
-      $( 'ul.nav li' ).on( 'click', function() {
-            $( this ).parent().find( 'li.active' ).removeClass( 'active' );
-            $( this ).addClass( 'active' );
-      });
-});
+
+
+/*
 
 //agrego la clase active cuando hago scroll sobre la seccion servicios (social pai)
-/*$('#servicios').waypoint(function() {
-
+$('#servicios').waypoint(function() {
     $("#menu_top li").removeClass('active') //elimino todos los active
     var prueba = $('a[href$="servicios"]:first');  //busco el a cuyo href sea servicio
     var padre = prueba.parent().addClass('active'); //me da el pade, el li para agregarle la clase active
@@ -162,4 +158,5 @@ $('#blog').waypoint(function() {
 
     $("#menu_top li").removeClass('active')
   
+<<<<<<< HEAD
 }, { offset: 0 });*/
