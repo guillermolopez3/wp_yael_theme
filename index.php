@@ -221,9 +221,11 @@ get_header(); ?>
 
   <section id="clientes" class="clientes mt-5">
       <div class="container">
-        <h2 class="titulo-seccion text-center"> <span class="subtitulo-seccion"> <?php echo ($titulo_clientes=='')? 'Los clientes' : $titulo_clientes ;?></span> <br> <strong><?php echo ($sub_ti_clientes=='')? 'Que tienen razón' : $sub_ti_clientes ?></strong></h2>
-        <div class="clientes-detalle">
-          <p class="text-center"><?php echo ($detalle_clientes !='') ? $detalle_clientes : 'Estos son los clientes que se animaron a tener éxito' ; ?></p>
+        <div style="background-image: url(<?php echo bloginfo('template_url')?>/img/fondo_dots.png );">
+          <h2 class="titulo-seccion text-center"> <span class="subtitulo-seccion"> <?php echo ($titulo_clientes=='')? 'Los clientes' : $titulo_clientes ;?></span> <br> <strong><?php echo ($sub_ti_clientes=='')? 'Que tienen razón' : $sub_ti_clientes ?></strong></h2>
+          <div class="clientes-detalle">
+            <p class="text-center"><?php echo ($detalle_clientes !='') ? $detalle_clientes : 'Estos son los clientes que se animaron a tener éxito' ; ?></p>
+          </div>
         </div>
 
         <div class="row">

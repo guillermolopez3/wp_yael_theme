@@ -21,7 +21,7 @@ get_header(); ?>
               
               <br>
 
-              <a id="btn_resul" href="" class="btn btn-black btn-header btn-naranja">¡La quiero!</a>
+              <a id="btn_resul" data-toggle="modal" data-target="#exampleModal" href="" data-toggle="modal" class="btn btn-black btn-header btn-naranja">¡La quiero!</a>
            </div>
          </div>
       </div>
@@ -53,31 +53,31 @@ get_header(); ?>
          wp_reset_postdata(); 
       ?>
 
-      
-      <!-- <div class="row">
-        <div class="col-md-6 d-flex justify-content-center">
-          <img class="blog-img" src="<?php bloginfo('template_url')?>/img/analytics.jpg">
-        </div>
-        <div class="col-md-6 blog-detalle">
-          <h2>Título de la nota</h2>
-          <div class="date"> 
-            <span class="fecha"> 12/10/2019 </span>-<span class="categoria">SEO</span> 
-          </div>
-          <div class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. </div>
-          
-          <br>
-          <a href="<?php echo get_permalink($link_btn_servici); ?>" class="btn btn-success btn-sm">Leer mas</a>
-        
-        </div>
-      </div> -->
-      
-
     </div>
 
   </div>
+
+
+  <!--=====================================
+VENTANA MODAL PARA EL REGISTRO
+======================================-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">¡LA QUIERO!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php echo do_shortcode('[sibwp_form id=2]'); ?>
+      </div>
+      
+    </div>
+  </div>
+</div>
      
 	
 
