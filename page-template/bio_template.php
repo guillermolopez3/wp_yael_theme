@@ -35,7 +35,7 @@ VENTANA MODAL PARA EL REGISTRO
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <?php echo do_shortcode('[sibwp_form id=2]'); ?>
+	        <?php echo do_shortcode('[mc4wp_form id="550"]'); ?>
 	      </div>
 	      
 	    </div>

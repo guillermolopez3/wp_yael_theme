@@ -1522,3 +1522,4 @@ function personalizar_footer($wp_customize){
 	) );
 }
 add_action('customize_register','personalizar_footer');
+

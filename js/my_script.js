@@ -22,7 +22,7 @@ $('#menu_top').each(function(){
 });
 
 //funcion para agregarle la clase active tanto si se mueve dentro de la misma pag como si cambia a blog
-$(function() {
+/*$(function() {
     var pathname = window.location.href; //fullpath 
     var url_base = window.location.origin + '/'; //url base
     var seccion = pathname.split('#');
@@ -55,7 +55,7 @@ $(function() {
                 });
             });
         }
-    }
+    }*/
   
   
   //agrega las clases cuando se hace click en el menu
