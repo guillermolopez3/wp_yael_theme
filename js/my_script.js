@@ -55,7 +55,7 @@ $('#menu_top').each(function(){
                 });
             });
         }
-    }*/
+    }
   
   
   //agrega las clases cuando se hace click en el menu
@@ -65,7 +65,7 @@ $('#menu_top').each(function(){
   });
 
 
-});
+});*/
 
 
 //boton que te persigue en movil

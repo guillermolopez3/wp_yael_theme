@@ -27,14 +27,18 @@
 get_header(); ?>
 
 	<section class="hero hero-mas-padding">
+    <div  style="background-image: url(<?php echo bloginfo('template_url')?>/img/fondo_casos_exito.png); height: 426px;">
       <div class="container">
-         <div class="row text-center">
-           <div class="col-12 main">
-             <h1 class="like-h1">Casos de éxito</h1>
+         <div class="row text-center d-flex justify-content-center align-items-center">
+            <div style="position: absolute;">
+              <img src="<?php echo bloginfo('template_url')?>/img/fondo_dots.png ">
+            </div>
+           <div class="col-12 main" style="margin-top: 100px;">
+             <h1 class="like-h1" style="color: #7A7A7A; font-size: 59px;">Casos de éxito</h1>
            </div>
-           <div class="blog-hero col-12" style="background-image: url(<?php echo bloginfo('template_url')?>/img/fondo_marketing.png );">
+           <div class="blog-hero col-12">
               
-              <h4>
+              <h4 style="color: #7A7A7A;">
                 Estos son algunos de los clientes que tienen razón y se la bancan.
               </h4>
               
@@ -43,6 +47,7 @@ get_header(); ?>
            </div>
          </div>
       </div>
+    </div>
   </section>
   
   <!-- CLIENTES -->
