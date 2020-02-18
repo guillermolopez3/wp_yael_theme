@@ -84,20 +84,24 @@ var btn_resul = document.getElementById('btn_resul');
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
     
-    var alto_menu = menu.clientHeight; //alto del nav
-    var distance = btn_resul.getBoundingClientRect().top; //distancia entre el top y el elemento
+    //console.log(btn_resul);
+    if(btn_resul != null){
+        var alto_menu = menu.clientHeight; //alto del nav
+        var distance = btn_resul.getBoundingClientRect().top; //distancia entre el top y el elemento
 
 
-    //si la distancia del btn mostrado es menor a la altura del nav (llego arriba) 
-    if(distance <= alto_menu){
-        header.style.display = 'block';
-        header.style.top = menu.clientHeight+'px';
+        //si la distancia del btn mostrado es menor a la altura del nav (llego arriba) 
+        if(distance <= alto_menu){
+            header.style.display = 'block';
+            header.style.top = menu.clientHeight+'px';
 
+        }
+        else{
+           // header.classList.remove("sticky");
+           header.style.display = 'none';
+        } 
     }
-    else{
-       // header.classList.remove("sticky");
-       header.style.display = 'none';
-    }
+   
 }
 
 

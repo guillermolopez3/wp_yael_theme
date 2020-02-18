@@ -21,7 +21,7 @@
     <div class="extract"><?php the_excerpt(); ?></div>
  
     <br>
-    <a href="<?php echo get_permalink($link_btn_servici); ?>" class="btn btn-success btn-sm">Leer mas</a>
+    <a href="<?php echo get_permalink($link_btn_servici); ?>" class="btn btn-naranja btn-sm">Leer mas</a>
             
   </div>
 </div>
